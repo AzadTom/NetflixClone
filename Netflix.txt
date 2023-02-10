@@ -1,0 +1,17 @@
+#1. setup project
+#2.  Get TMDB Api for data
+#3. build Header
+#4. Get all movies
+#5. Build different section
+#6. Build banner
+#7. Get youtube search Api
+#8. show movie trailer on click
+#9. Host project on netlify
+#10. Next step
+
+
+
+
+
+api key =>
+c6d30650c6eb237a2804c658bf67ff6f

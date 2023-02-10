@@ -1,0 +1,481 @@
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+
+}
+
+body {
+
+    font-family: Arial, Helvetica, sans-serif;
+    background: #141414;
+
+
+}
+
+*::-webkit-scrollbar{
+
+    display: none;
+  ;
+
+
+
+}
+
+.max-container {
+
+    width: 100%;
+    max-width: 1242px;
+    margin: 0 auto;
+    
+}
+
+
+.black-bg{
+
+    background-color: black;
+
+}
+
+
+
+header {
+
+    background-color: transparent;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    transition: all ease 1000ms;
+
+
+   
+
+  
+
+    .container {
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+     
+
+
+    
+
+
+      .left-cont {
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        
+
+
+
+        img {
+
+            max-width: 100px;
+            cursor: pointer;
+
+
+
+
+        }
+
+        .main-nav {
+
+            display: inline-flex;
+            color: white;
+            list-style-type: none;
+            flex-direction: row;
+            column-gap: 8px;
+
+            .nav-item {
+
+                color: #afafaf;
+                cursor: pointer;
+
+
+            }
+
+            .active {
+
+                color: white;
+                font-weight: bold;
+            }
+           
+
+          
+        }
+      }
+
+      .right-cont {
+
+
+        display: flex;
+        align-items: center;
+        column-gap: 8px;
+    
+
+        
+
+        img {
+
+
+            width: 35px;
+          
+            cursor: pointer;
+
+
+        }
+
+        svg {
+
+            color: white;
+            cursor: pointer;
+            
+        }
+
+      }
+
+    }
+
+
+}
+
+
+
+.banner-section {
+
+
+    position: relative;
+    width: 100%;
+    background-size: cover;
+  
+
+
+
+
+
+    .banner-content{
+
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+        color: white;
+        padding: 2rem;
+        
+
+
+         background-size: cover;
+         background-repeat: no-repeat;
+         height: 100vh;
+         max-width: 100%;
+
+
+         .banner_title{
+
+            color: white;
+            font-size: 84px;
+            width: 50%;
+            line-height: 1.2;
+            margin-bottom: 16px;
+
+
+
+         }
+
+
+         .banner_info{
+
+
+            font-size: 22px;
+            font-weight: 700;
+            line-height: 1.5;
+            margin-bottom: 14px;
+
+
+
+         }
+
+         .banner_overview{
+
+            font-size: 16.4px;
+            color: white;
+            width: 50%;
+            line-height: 1.2;
+            margin-bottom: 14px;
+
+         }
+
+
+         button:last-child{
+
+
+            background: #141414;
+        }
+
+         .action-btn-cont{
+
+
+            display: flex;
+            align-items: center;
+            column-gap: 11px;
+
+
+           
+            
+          
+
+            button{
+
+
+                background: white;
+                padding: 1em 2em;
+                list-style-type: none;
+                border-radius: 4px;
+                border: none;
+                display: flex;
+                column-gap: 2px;
+                align-items: center;
+
+
+            }
+
+        }
+
+    }
+
+           
+
+
+    .banner-fade{
+
+
+        height: 120px;
+        background: linear-gradient(180deg , transparent , rgba(37,37,37 ,.61), #141414);
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        left: 0;
+
+
+    }
+
+
+}
+
+
+
+
+// movie section
+
+.movies-cont {
+
+   
+      
+     
+
+        .movies-section {
+         
+            
+
+
+             .movie-section-heading {
+                margin-bottom: 0.5em;
+                color: white;
+                font-size: 20px;
+                line-height: 1.2;
+                font-weight: 700;
+                cursor: pointer;
+                
+
+               
+
+                span {
+
+                    color: skyblue;
+                    font-size: 12px;
+                    display: none;
+                    margin-left: 0.5em;
+                  
+
+                }
+
+                &:hover span{
+
+                    display: inline-block;
+                    
+
+                }
+
+
+             }
+
+             .movies-row {
+
+              
+                display: flex;
+                flex-direction: row;
+                column-gap: 1em;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 1em;
+                overflow: scroll;
+               
+                 
+              
+                
+
+
+               
+              
+
+
+                
+                img {
+
+                    width:345px;
+                  
+                    cursor: pointer;
+                    
+                    border-radius: 2em;
+
+                    // &:hover{
+
+                    //     transform: scale(1.5);
+                    // transition: all linear 300ms;
+                    // box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+                    // }
+
+
+                }
+
+             }
+             
+
+               
+
+        }
+
+
+}
+
+
+
+
+footer{
+
+  
+    color: #737373;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2em;
+
+
+
+
+
+
+
+
+
+
+
+    h3 {
+
+
+        margin-top: 8em;
+    }
+  
+
+  
+
+
+
+
+    .link-cont{
+
+
+        display: flex;
+        flex-direction: row;
+        column-gap: 8em;
+        margin-bottom: 2em;
+
+
+
+        ul{
+
+            list-style-type: none;
+            display: flex;
+            flex-direction: column;
+            row-gap: 1em;
+
+
+            li {
+
+                color: #737373;
+                font-size: 1rem;
+              
+
+            }
+
+
+        }
+
+
+
+    }
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width:767px) {
+
+
+        header {
+
+            .container{
+
+                .left-cont{
+
+                    .main-nav{
+
+                        display: none;
+
+                    }
+                }
+            }
+
+        }
+    
+}
