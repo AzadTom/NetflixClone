@@ -4,12 +4,14 @@ const baseurl = "https://api.themoviedb.org/3";
 
 const imgPath = "https://image.tmdb.org/t/p/original";
 
+// AIzaSyDsrPu3jwscT19U8hKNHtZMtY6TzTeIM0w
+
 
 const apiPaths = {
     fetchAllCategories: `${baseurl}/genre/movie/list?api_key=${apikey}`,
     fetchMoviesList: (id) => `${baseurl}/discover/movie?api_key=${apikey}&with_genres=${id}`,
     fetchTrending:`${baseurl}/trending/all/day?api_key=${apikey}&language=en-US`,
-    searchOnYoutube: (query) => `https://www.googleapis.com/youtube/v3/search?part=snippet&q=${query}&key=AIzaSyC0SZJkHFX-fQ7NrsxdI4l4mGwYuY4l7P8`
+    searchOnYoutube: (query) => `https://www.googleapis.com/youtube/v3/search?part=snippet&q=${query}&key=AIzaSyDsrPu3jwscT19U8hKNHtZMtY6TzTeIM0w`
 }
 
 
@@ -57,13 +59,14 @@ function buildbanner(banner){
 
 
         const bannercont = document.getElementById('banner-cont');
+        let itemTitle = banner.title== null ? banner.name : banner.title; 
 
         bannercont.style.backgroundImage =  ` url(' ${imgPath}${banner.backdrop_path}')`;
 
         const div = document.createElement('div');
 
         div.innerHTML = ` <div class="banner-content">
-        <h2 class="banner_title">${banner.title}</h2>
+        <h2 class="banner_title">${itemTitle}</h2>
         <p class="banner_info">Trending in movies | Released - ${banner.release_date}</p>
         <p class="banner_overview">
           ${banner.overview && banner.overview.length >200 ? banner.overview.slice(0,200).trim()+'...' : banner.overview}
@@ -182,8 +185,13 @@ function buildmoviesection(movielist , categorieName)
     const movielistHTML = document.getElementById('movies-cont');
 
     const imgHTML=  movielist.map( item =>{
+         
+          let itemTitle = item.title== null ? item.name : item.title; 
 
-        return `    <img src="${imgPath}${item.backdrop_path}" alt="${item.title}"> `;
+        return `   <div class="movie"> <img src="${imgPath}${item.backdrop_path}"  class= " item"onclick ="searchMovieTrailer('${itemTitle}')" alt="${itemTitle}"  >
+                          <p>${itemTitle } </p>
+                          </div>
+                     `;
 
 
     }).join(' ');
@@ -231,7 +239,37 @@ function buildmoviesection(movielist , categorieName)
   
 
 
+function searchMovieTrailer(moviename){
+
+
+
+  if(!moviename) return ;
+
+  fetch(apiPaths.searchOnYoutube(moviename))
+  .then(res => res.json())
+  .then (res => {
+    console.log(res.items[0]);
+    const bestres = res.items[0];
+    const youtubeurl = `https://www.youtube.com/watch?v=${bestres.id.videoId}`;
+  })
+  .catch(err => console.error(err))
+
+
+    const item  = document.querySelector('.item');
+
+
+  
+
+      
+
+
+
+
+
+}
     
+
+
 
 
 

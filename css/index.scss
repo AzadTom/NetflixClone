@@ -168,6 +168,7 @@ header {
         align-items: flex-start;
         flex-direction: column;
         color: white;
+        width: 100%;
         padding: 2rem;
         
 
@@ -326,8 +327,8 @@ header {
                 align-items: center;
                 justify-content: center;
                 margin-bottom: 1em;
-                overflow: scroll;
-               
+               overflow: scroll;
+              
                  
               
                 
@@ -340,22 +341,59 @@ header {
                 
                 img {
 
-                    width:345px;
+             width: 300px;
+                   
                   
                     cursor: pointer;
                     
                     border-radius: 2em;
 
-                    // &:hover{
-
-                    //     transform: scale(1.5);
-                    // transition: all linear 300ms;
-                    // box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-
-                    // }
+                   
 
 
                 }
+
+
+                .movie{
+
+                    display: flex;
+                    flex-direction: column;
+                  align-items: center;
+                  text-align: center;
+                  row-gap: 0.5em;
+                  color: white;
+                  font-weight: 200;
+                  
+
+                //   &:hover{
+
+                //     transform: scale(1.5);
+                //     position: absolute;
+                //     transition: transform  linear 300ms;
+                //     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+                //     border-radius: 2em;
+
+                //      img {
+
+                //         border-radius: 0%;
+                //         border-top-left-radius: 2em;
+                //         border-top-right-radius: 2em;
+
+
+                //      }
+
+                //      p {
+
+                //         height: 2em;
+
+                //      }
+
+                //     }
+
+                    
+
+                }
+
 
              }
              
@@ -452,6 +490,28 @@ footer{
 
 
 
+@media screen and (max-width:500px) {
+
+
+
+    footer{
+
+      
+
+
+        .link-cont{
+
+            flex-direction: column;
+            column-gap: 1em;
+            
+
+
+    }
+
+
+}
+
+}
 
 
 
@@ -475,6 +535,22 @@ footer{
                     }
                 }
             }
+
+        }
+
+
+        footer{
+
+            padding: 2em;
+
+
+            .link-cont{
+
+                flex-direction: column;
+                column-gap: 1em;
+
+            }
+
 
         }
     
