@@ -4,7 +4,7 @@ const baseurl = "https://api.themoviedb.org/3";
 
 const imgPath = "https://image.tmdb.org/t/p/original";
 
-// AIzaSyDsrPu3jwscT19U8hKNHtZMtY6TzTeIM0w
+
 
 
 const apiPaths = {
@@ -188,7 +188,7 @@ function buildmoviesection(movielist , categorieName)
          
           let itemTitle = item.title== null ? item.name : item.title; 
 
-        return `   <div class="movie"> <img src="${imgPath}${item.backdrop_path}"  class= " item"onclick ="searchMovieTrailer('${itemTitle}')" alt="${itemTitle}"  >
+        return `   <div class="movie"> <img src="${imgPath}${item.backdrop_path}"  class= "item" onclick="searchMovieTrailer('${itemTitle}')" alt="${itemTitle}"  loading="lazy">
                           <p>${itemTitle } </p>
                           </div>
                      `;
